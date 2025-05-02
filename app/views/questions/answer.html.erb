@@ -1,15 +1,24 @@
-<div>
-  <p> <%= @search %> </p>
-  <p>-You</p>
+<div class="d-flex ms-3">
+  <div class="bg-secondary p-1">
+  </div>
+  <div class="ms-3 mt-3">
+    <p> <%= @search %> </p>
+    <p>-You</p>
+  </div>
 </div>
-<div>
-  <% if @search.capitalize == "I am going to work" %>
-    <p>Great!</p>
-  <% elsif @search.end_with?("?") %>
-    <p>Silly question, get dressed and go to work!</p>
-  <% else %>
-    <p>I don't care, get dressed and go to work!</p>
-  <% end %>
-  <p>-Your coach</p>
+<div class="d-flex ms-3 mt-3">
+  <div class="bg-secondary p-1"></div>
+  <div class="ms-3 mt-3">
+    <% if @search.capitalize == "I am going to work" %>
+      <p>Great! 👍</p>
+    <% elsif @search.end_with?("?") %>
+      <p>Silly question, get dressed and go to work! 🪿</p>
+    <% else %>
+      <p>I don't care, get dressed and go to work! 🧑‍💻</p>
+    <% end %>
+    <p>-Your coach</p>
+  </div>
 </div>
-<%= link_to "Ask a new question", ask_path, style: "text-decoration: none;" %>
+<div class="mt-3 ms-3">
+  <%= link_to "Ask a new question", ask_path, style: "text-decoration: none;" %>
+</div>
